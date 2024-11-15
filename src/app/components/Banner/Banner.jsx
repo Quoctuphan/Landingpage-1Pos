@@ -1,6 +1,17 @@
-
+'use client'
 import Image from "next/image"
+import usePosisionElement from "@/hook/usePosisionElement"
+import useWindownHeight from "@/hook/useWindownHeight"
+import { useEffect, useState } from "react"
+
+
 export default function Banner(){
+    const positionElement = usePosisionElement('.my-position')
+    const top = positionElement
+    const height = useWindownHeight()
+    console.log("haha",top.top)
+ 
+    console.log("with",height)
     return (
         <div className="absolute top-0 left-0 h-[1000px] sm:w-full bg-[url('/image/bg-banner.png')] bg-cover">
             <div className="-bg--primary/70 h-full ">
@@ -20,8 +31,9 @@ export default function Banner(){
                     
                 </div>
                 <div className="w-full flex  justify-center px-4 h-fit pt-14">
-                <div className=" relative w-[300px]  lg:w-[1350px]  ">
-                        <Image className="filler items-center h-[400px] lg:h-auto hover:rotate-x-20 transition-transform duration-300 " alt="Ipad"  src={"/image/imgIpad.png"} width={1350} height={50}/>
+                <div className=" my-position  relative w-[300px]  lg:w-[1350px]  ">
+                    {/*  ${(width <= top/3) ? "rotate-x-20" : (width <= (top/3) * 2 ? "rotate-x-10" : "rotate-x-0")  } */}
+                        <Image className={` filler my-position ${height <= top.top/3 ? "rotate-x-20" : height <= (top.top / 3) * 2 ? "rotate-x-10" : "rotate-x-0" }  items-center h-[400px]  lg:h-auto  transition-transform ease-linear  `} alt="Ipad"  src={"/image/imgIpad.png"} width={1350} height={50}/>
                 </div>
                 </div>
             </div>

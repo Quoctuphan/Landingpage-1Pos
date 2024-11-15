@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 export default function Header(){
    const [scrollPosition, setScrollPosition] = useState(0);
    const [isOpen, setIsOpen] = useState(false);
-   console.log(isOpen)
 
    useEffect(() => {
        const checkScrollbar = () => {

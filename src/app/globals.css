@@ -5,6 +5,12 @@
   .rotate-x-20 {
     transform: perspective(1000px) rotateX(20deg);
   }
+  .rotate-x-10 {
+    transform: perspective(1000px) rotateX(10deg);
+  }
+  .rotate-x-0 {
+    transform: perspective(1000px) rotateX(0deg);
+  }
 }
 .overflow-visible-css {
   overflow: visible !important;
@@ -22,7 +28,7 @@
 .text_color ul > li {
   color: black !important;
 }
-@media(max-width: 821px){
+@media (max-width: 821px) {
   .text_color1 ul > li {
     color: black !important;
   }
