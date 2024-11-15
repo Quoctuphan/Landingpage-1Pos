@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    // images:{
+    //     remotePatterns:{
+    //         // ulr bị chặn
+    //     }
+    // }
+}
 
 module.exports = nextConfig

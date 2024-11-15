@@ -12,7 +12,21 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        '--primary': '#007aff',
+        '--title': '#274b96 ',
+      },
+      transform: {
+        'rotate-x-20': 'rotateX(20deg)',
+      },
+      screens: {
+        'ss': { 'max': '639px' }, // Màn hình nhỏ hơn 640px
+        'tbl': { 'max': '821px' }, // Màn hình nhỏ hơn 640px
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    // dùng để chỉ định dòng thêm giấu ....
+    require('@tailwindcss/line-clamp'), 
+  ],
 }

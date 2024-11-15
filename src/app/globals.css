@@ -1,27 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer utilities {
+  .rotate-x-20 {
+    transform: perspective(1000px) rotateX(20deg);
+  }
+}
+.overflow-visible-css {
+  overflow: visible !important;
+}
+.hover-bg-blue:hover {
+  background-color: #005fab !important;
+}
+.swiper-slide {
+  overflow: visible !important;
+}
+.hover-children:hover button {
+  background-color: rgb(163, 163, 243) !important;
+  color: #005fab !important;
+}
+.text_color ul > li {
+  color: black !important;
+}
+@media(max-width: 821px){
+  .text_color1 ul > li {
+    color: black !important;
+  }
+}
+@media (max-width: 1147px) {
+  .width {
+    width: 100% !important;
+  }
+}
+@media (min-width: 1148px) {
+  .width-lg {
+    width: 600px !important;
+  }
+}
+@media (min-width: 2000px) {
+  .width-xl {
+    width: 800px !important;
+  }
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
