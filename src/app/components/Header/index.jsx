@@ -22,7 +22,7 @@ export default function Header(){
        window.removeEventListener("scroll", checkScrollbar);
        };
 
-   }, [])
+   }, [scrollPosition])
    const handlerOnclick = ( ) => {
       setIsOpen(!isOpen)
    }

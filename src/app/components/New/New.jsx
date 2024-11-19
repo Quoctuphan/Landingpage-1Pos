@@ -20,9 +20,9 @@ export default function New(){
             </div>
             <div className="grid ss:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {
-                    data.map(item => {
+                    data.map((item, index) => {
                         return(
-                            <NewItem title={item.title} src={item.src} title1={item.title1} des={item.des}/>
+                            <NewItem key={index}  title={item.title} src={item.src} title1={item.title1} des={item.des}/>
                         )
                     })
                 }

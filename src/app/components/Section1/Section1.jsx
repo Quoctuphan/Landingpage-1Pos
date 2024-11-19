@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Section1() {
 
+export default function Section1() {
     const bank = [
         {id: 1, name:"/image/acbpng.png"},
         {id: 2, name:"/image/BHS.png"},

@@ -2,16 +2,12 @@
 import Image from "next/image"
 import usePosisionElement from "@/hook/usePosisionElement"
 import useWindownHeight from "@/hook/useWindownHeight"
-import { useEffect, useState } from "react"
 
 
 export default function Banner(){
     const positionElement = usePosisionElement('.my-position')
     const top = positionElement
     const height = useWindownHeight()
-    console.log("haha",top.top)
- 
-    console.log("with",height)
     return (
         <div className="absolute top-0 left-0 h-[1000px] sm:w-full bg-[url('/image/bg-banner.png')] bg-cover">
             <div className="-bg--primary/70 h-full ">
